@@ -24,7 +24,16 @@ class AppWidgetState extends State<AppWidget> {
     counter++;
     // response variable is not only the json data it is info about the data and has the json data nested inside
     final response = await get(
-        Uri.parse('https://jsonplaceholder.typicode.com/photos/$counter'));
+      Uri.parse('https://jsonplaceholder.typicode.com/photos/$counter'),
+      headers: {"x-api-key": "c55719cc-5899-4129-b837-f68e7bde835b"},
+    );
+
+// START HERE
+// Key added, next step is to add the ulr, but cats api works differently to what we have here so its gonna need a reffractorising.
+// This button incr the counter which == the image id and gets that
+// The cats button will fetch what it wants and be limited to one image
+// cats example: https://github.com/AdenForshaw/theCatApi-examples/blob/master/vue/basic-search.html
+
     // Creat a new model image instance,
     // take the json out, and construct a new image model -> imageModel.
     // so call the named constuctor from json -> fromJson
