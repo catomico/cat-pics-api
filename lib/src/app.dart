@@ -34,6 +34,8 @@ class AppWidgetState extends State<AppWidget> {
 // The cats button will fetch what it wants and be limited to one image
 // cats example: https://github.com/AdenForshaw/theCatApi-examples/blob/master/vue/basic-search.html
 
+// one question: should I not hide this key????
+
     // Creat a new model image instance,
     // take the json out, and construct a new image model -> imageModel.
     // so call the named constuctor from json -> fromJson
