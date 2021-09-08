@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pics/src/models/image_model.dart';
+import 'package:pics_api/src/models/image_model.dart';
 import '../../src/models/image_model.dart';
 
 // The image list holds data that changes, i.e., add to list, but the parent widget of the app state is responsible for the changing data, not the image list itself, and won't re-render itself.

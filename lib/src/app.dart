@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' show get;
-import 'package:pics/src/widgets/image_list.dart';
+import 'package:pics_api/src/widgets/image_list.dart';
 import '/src/models/image_model.dart';
 import 'dart:convert';
 
