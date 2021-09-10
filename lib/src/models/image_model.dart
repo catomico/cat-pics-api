@@ -1,5 +1,5 @@
 class ImageModel {
-  int? id;
+  String? id;
   String url = '';
   String title = '';
 
