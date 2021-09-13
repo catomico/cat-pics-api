@@ -36,7 +36,7 @@ class ImageList extends StatelessWidget {
   }
 }
 
-// pass in the image Modoel instance add some style, but don't go look for the list of images here: Image.network(images[index].url)
+// pass in the image Model instance add some style, but don't go look for the list of images here: Image.network(images[index].url)
 Widget buildImageStyle(ImageModel image) {
   return Container(
     decoration: BoxDecoration(
@@ -52,7 +52,7 @@ Widget buildImageStyle(ImageModel image) {
           child: Image.network(image.url),
           padding: EdgeInsets.only(bottom: (10.0)),
         ),
-        Text(image.title),
+        // Text(image.title),
       ],
     ),
   );
