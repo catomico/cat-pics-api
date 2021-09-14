@@ -19,10 +19,10 @@ class ImageList extends StatelessWidget {
     return ListView.builder(
       // number of images to show = all of them
       itemCount: images.length,
+      // itemCount: 1,
       itemBuilder: (context, int index) {
-        // return a text element that references the ImageList or imaage[look up the index] and pull out the .url
-        // return buildImageStyle(images[index]);
-        return Text(images[index].url);
+        // return a text element that references the ImageList or image[look up the index] and pull out the .url
+        return buildImageStyle(images[index]);
         // Container(
         // there can be too much here so take it out to buildImageStyles method below.
         // decoration: BoxDecoration(

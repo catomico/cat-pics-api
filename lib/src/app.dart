@@ -28,9 +28,9 @@ class AppWidgetState extends State<AppWidget> {
       Uri.parse('https://api.thecatapi.com/v1/images/search'),
       headers: {"x-api-key": "c55719cc-5899-4129-b837-f68e7bde835b"},
     );
+    print('Response body: ${response.body}');
 
     final imageModel = ImageModel.fromJson(json.decode(response.body));
-    print('Response body: ${response.body}');
     //adds to the list - this will cause the app to re-render, therefore call setState
     setState(() {
       images.add(imageModel);
