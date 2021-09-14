@@ -25,6 +25,11 @@ class AppWidgetState extends State<AppWidget> {
     // response variable is not only the json data it is info about the data and has the json data nested inside
     final response = await get(
         Uri.parse('https://jsonplaceholder.typicode.com/photos/$counter'));
+    // final response = await get(
+    //   Uri.parse('https://api.thecatapi.com/v1/images/search'),
+    //   headers: {"x-api-key": "c55719cc-5899-4129-b837-f68e7bde835b"},
+    // );
+    print('Response body: ${response.body}');
     // Creat a new model image instance,
     // take the json out, and construct a new image model -> imageModel.
     // so call the named constuctor from json -> fromJson
