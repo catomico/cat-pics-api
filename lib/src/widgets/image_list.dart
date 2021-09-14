@@ -21,7 +21,8 @@ class ImageList extends StatelessWidget {
       itemCount: images.length,
       itemBuilder: (context, int index) {
         // return a text element that references the ImageList or imaage[look up the index] and pull out the .url
-        return buildImageStyle(images[index]);
+        // return buildImageStyle(images[index]);
+        return Text(images[index].url);
         // Container(
         // there can be too much here so take it out to buildImageStyles method below.
         // decoration: BoxDecoration(
