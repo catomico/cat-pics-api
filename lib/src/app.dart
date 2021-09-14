@@ -30,7 +30,7 @@ class AppWidgetState extends State<AppWidget> {
     );
     print('Response body: ${response.body}');
 
-    final imageModel = ImageModel.fromJson(json.decode(response.body[0]));
+    final imageModel = ImageModel.fromJson(json.decode(response.body));
     //adds to the list - this will cause the app to re-render, therefore call setState
     setState(() {
       images.add(imageModel);
