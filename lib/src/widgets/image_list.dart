@@ -10,10 +10,10 @@ class ImageList extends StatelessWidget {
   final List<ImageModel> images;
 
   // constructor
-  // this. assumes there is an stance variable
+  // this. assumes there is an instance variable
   ImageList(this.images);
-// when the item builder function gets called, the a widget representing an image from the ImageList(this.image) is returned.
-// but the are not provided directly to the builder, below. Instead they are refered by the index
+// when the item builder function gets called, a widget representing an image from the ImageList(this.image) is returned.
+// but they are not provided directly to the builder, below. Instead they are refered by the index
 
   Widget build(BuildContext context) {
     return ListView.builder(
