@@ -27,8 +27,9 @@ class AppWidgetState extends State<AppWidget> {
     final response = await http.get(
       Uri.parse('https://api.thecatapi.com/v1/images/search'),
       headers: {"x-api-key": "c55719cc-5899-4129-b837-f68e7bde835b"},
+      // Uri.parse('https://jsonplaceholder.typicode.com/photos/$counter'));
     );
-    print(response.body);
+    // print(response.body);
 
     final imageModel = ImageModel.fromJson(json.decode(response.body)[0]);
     //adds to the list - this will cause the app to re-render, therefore call setState
