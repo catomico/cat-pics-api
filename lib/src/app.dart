@@ -30,6 +30,7 @@ class AppWidgetState extends State<AppWidget> {
       // Uri.parse('https://jsonplaceholder.typicode.com/photos/$counter'));
     );
     // print(response.body);
+    // print('Response body: ${response.body}');
 
     final imageModel = ImageModel.fromJson(json.decode(response.body)[0]);
     //adds to the list - this will cause the app to re-render, therefore call setState
