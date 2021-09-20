@@ -10,17 +10,18 @@ class ImageList extends StatelessWidget {
   final List<ImageModel> images;
 
   // constructor
-  // this. assumes there is an stance variable
+  // this. assumes there is an instance variable
   ImageList(this.images);
-// when the item builder function gets called, the a widget representing an image from the ImageList(this.image) is returned.
-// but the are not provided directly to the builder, below. Instead they are refered by the index
+// when the item builder function gets called, a widget representing an image from the ImageList(this.image) is returned.
+// but they are not provided directly to the builder, below. Instead they are refered by the index
 
   Widget build(BuildContext context) {
     return ListView.builder(
       // number of images to show = all of them
       itemCount: images.length,
+      // itemCount: 1,
       itemBuilder: (context, int index) {
-        // return a text element that references the ImageList or imaage[look up the index] and pull out the .url
+        // return a text element that references the ImageList or image[look up the index] and pull out the .url
         return buildImageStyle(images[index]);
         // Container(
         // there can be too much here so take it out to buildImageStyles method below.
@@ -36,7 +37,7 @@ class ImageList extends StatelessWidget {
   }
 }
 
-// pass in the image Modoel instance add some style, but don't go look for the list of images here: Image.network(images[index].url)
+// pass in the image Model instance add some style, but don't go look for the list of images here: Image.network(images[index].url)
 Widget buildImageStyle(ImageModel image) {
   return Container(
     decoration: BoxDecoration(
@@ -52,7 +53,7 @@ Widget buildImageStyle(ImageModel image) {
           child: Image.network(image.url),
           padding: EdgeInsets.only(bottom: (10.0)),
         ),
-        Text(image.title),
+        // Text(image.title),
       ],
     ),
   );
