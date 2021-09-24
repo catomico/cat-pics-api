@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:http/http.dart' show get;
-import 'package:http/http.dart' as http;
+// import 'package:http/http.dart' as http;
+import 'package:http/http.dart' show get;
 import 'package:pics_api/src/widgets/image_list.dart';
 import '/src/models/image_model.dart';
 import 'dart:convert';
@@ -24,7 +25,8 @@ class AppWidgetState extends State<AppWidget> {
   void fetchImage() async {
     // counter++;
     // response variable is not only the json data it is info about the data and has the json data nested inside
-    final response = await http.get(
+    // final response = await http.get(
+    final response = await get(
       Uri.parse('https://api.thecatapi.com/v1/images/search'),
       headers: {"x-api-key": "c55719cc-5899-4129-b837-f68e7bde835b"},
       // Uri.parse('https://jsonplaceholder.typicode.com/photos/$counter'));
